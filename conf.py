@@ -48,6 +48,12 @@ master_doc = "index"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_book_theme'
+
+html_theme_options = {
+    "repository_url": "https://github.com/AccelerationConsortium/wireless-color-sensor",
+    "use_repository_button": True,
+}
+
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_title = "Getting started guide for wireless color sensor"
