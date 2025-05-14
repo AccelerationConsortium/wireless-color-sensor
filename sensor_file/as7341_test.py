@@ -7,10 +7,10 @@ sensor = Sensor(i2c=I2C(0, scl=Pin(5), sda=Pin(4)))
 
 def read_sensor_data():
     """Read dictionary of sensor data"""
-    sensor.LED = True
+    
     # Get all channel data from the sensor
     channel_data = sensor.all_channels
-    sensor.LED = False
+    
     
     CHANNEL_NAMES = [
         "ch410",
