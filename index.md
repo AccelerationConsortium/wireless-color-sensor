@@ -11,7 +11,17 @@ This documentation provides a guide to assemble and test a color sensor package 
 <br>
 Following is a video of liquid color matching demo run on OT-2 with this wireless color sensor:
 
-(Video link to be added)
+<br>
+ <div style="text-align: center; margin-top: 10px;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q17_V_8dtdw?si=1xcwbXNUfm3K2xs" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+ </div>
+<br>
+A [introduction video](https://youtu.be/9EcxYCiEJx0?si=aq3iU75M-o05p63D) to the Hugging Face Spaces of a liquid color matching experiment demo using OT2 liquid handler with this wireless color sensor.
 
 The estimated time of the hardware assembling is:
 
