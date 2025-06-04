@@ -37,7 +37,7 @@ This documentation assumes that readers have completed [Course 1: Hello World](h
     - [<span class="color-magenta">③ AS7341 color sensor</span>](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4698/13162109)
     - [<span class="color-orange">④ Picowbell P5905</span>](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5905/22596390)
     - [<span class="color-purple">⑤ STEMMA QT Wire</span>](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-17258/13629029)
-    - [<span class="color-green">⑥ Wireless charger receiver</span>](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/317010008/5487684)
+    - [<span class="color-green">⑥ Wireless charger receiver</span>](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2162/6827104)
 
     - [<span class="color-yellow">⑦ Lipo battery with 2-pole JST connector wire</span>](https://www.amazon.ca/EEMB-Battery-Rechargeable-Lithium-Connector/dp/B08FD3V6TF/)
 
@@ -51,7 +51,7 @@ This documentation assumes that readers have completed [Course 1: Hello World](h
       <img src="_static/images/Electronic-parts-charging.png" width="500">
     </div>
 
-    - [<span class="color-red">① Wireless charger transmitters (2x) </span>](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/113030020/5487569)
+    - [<span class="color-red">① Wireless charger transmitters (2x) </span>](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/1901/5629432)
     - <span class="color-orange"> ② Mirco-USB to USB Type-A cables ([1 short](https://www.amazon.ca/gp/product/B073PQWY2B/) and [1 long](https://www.digikey.ca/en/products/detail/stewart-connector/SC-2AMK003F/8544577)) </span>
     - [<span class="color-blue">③ Power supply (5V 2A) </span>](https://www.digikey.ca/en/products/detail/xp-power/VEL05US050-US-BB/5023710)
    
