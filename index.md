@@ -13,7 +13,7 @@ Following is a video of liquid color matching demo run on OT-2 with this wireles
 
 <br>
  <div style="text-align: center; margin-top: 10px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q17_V_8dtdw?si=1xcwbXNUfm3K2xs" 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q17_V_8dtdw" 
               title="YouTube video player" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
