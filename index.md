@@ -21,7 +21,7 @@ Following is a video of liquid color matching demo run on OT-2 with this wireles
       </iframe>
  </div>
 <br>
-A [introduction video](https://youtu.be/9EcxYCiEJx0?si=aq3iU75M-o05p63D) to the Hugging Face Spaces of a liquid color matching experiment demo using OT2 liquid handler with this wireless color sensor.
+An [introduction video](https://youtu.be/9EcxYCiEJx0?si=aq3iU75M-o05p63D) to the Hugging Face Spaces of a liquid color matching experiment demo using OT2 liquid handler with this wireless color sensor.
 
 The estimated time of the hardware assembling is:
 
