@@ -51,7 +51,12 @@ html_theme = 'sphinx_book_theme'
 
 html_theme_options = {
     "repository_url": "https://github.com/AccelerationConsortium/wireless-color-sensor",
+    "repository_branch": "main",
+    "path_to_docs": ".",
     "use_repository_button": True,
+    "use_edit_page_button": True,
+    "use_issues_button": True,
+    "use_source_button": True,
 }
 
 html_static_path = ["_static"]
