@@ -11,16 +11,17 @@ This documentation provides a guide to assemble and test a color sensor package 
 <br>
 Following is a video of liquid color matching demo run on OT-2 with this wireless color sensor:
 
-<br>
- <div style="text-align: center; margin-top: 10px;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q17_V_8dtdw" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-      </iframe>
- </div>
- 
+
+<div style="text-align: center; margin-top: 10px;">
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/Ql7_V_8dtdw?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+  </iframe>
+</div>
+
 <br>
 
 Watch this [introduction video](https://www.youtube.com/watch?v=9EcxYCiEJx0) to learn more about the [LCM Hugging Face Space](https://huggingface.co/spaces/AccelerationConsortium/OT-2-LCM) used for liquid color matching experiments with the OT2 liquid handler and this wireless color sensor.
