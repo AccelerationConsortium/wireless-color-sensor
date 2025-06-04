@@ -26,7 +26,7 @@ Following is a video of liquid color matching demo run on OT-2 with this wireles
 
 Watch this [introduction video](https://www.youtube.com/watch?v=9EcxYCiEJx0) to learn more about the [LCM Hugging Face Space](https://huggingface.co/spaces/AccelerationConsortium/OT-2-LCM) used for liquid color matching experiments with the OT2 liquid handler and this wireless color sensor.
 
-The estimated time of the hardware assembling is **3 hours**.
+The estimated time of the hardware assembling is **3-4 hours** assuming no soldering background and low coding experience.
 
 <br>
 
