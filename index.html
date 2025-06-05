@@ -1,0 +1,1120 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting started guide for wireless color sensor &#8212; Getting started guide for wireless color sensor</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=be722ba1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<script defer data-domain="ac-training-lab.readthedocs.io" src="https://plausible.io/js/script.js"></script>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Acceleration-Consortium-vectortunnel-colour.png" class="logo__image only-light" alt="Getting started guide for wireless color sensor - Home"/>
+    <script>document.write(`<img src="_static/Acceleration-Consortium-vectortunnel-colour.png" class="logo__image only-dark" alt="Getting started guide for wireless color sensor - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/AccelerationConsortium/wireless-color-sensor" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AccelerationConsortium/wireless-color-sensor/blob/main/./index.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AccelerationConsortium/wireless-color-sensor/edit/main/./index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AccelerationConsortium/wireless-color-sensor/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting started guide for wireless color sensor</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bill-of-materials">Bill of materials</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-parts">Electronic parts:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printed-parts">3D printed parts:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-components-and-tools">Mechanical components and tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-assembly">Hardware assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-before-you-begin-assembling">Preparation / Before you begin assembling:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printed-parts-preparation">3D printed parts preparation:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-parts-soldering">Electronic parts soldering:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dual-charging-connection-check">Dual charging connection check:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assembling">Assembling:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-package-assembling">Sensor Package assembling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dual-charging-port-assembling">Dual Charging port assembling:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-part">Software part</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-code-for-sensor">Test code for sensor</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-guide-for-wireless-color-sensor">
+<h1>Getting started guide for wireless color sensor<a class="headerlink" href="#getting-started-guide-for-wireless-color-sensor" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This documentation provides a guide to assemble and test a color sensor package with a dual wireless charging port that could be implemented to the OT-2 liquid handling robot.</p>
+   <div style="text-align: center; margin-top: 10px;">
+      <img src="_static/images/Wireless-color-sensor-in-OT-2.png" width="500">
+  </div>
+<br>
+Following is a video of liquid color matching demo run on OT-2 with this wireless color sensor:
+<div style="text-align: center; margin-top: 10px;">
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/Ql7_V_8dtdw?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+  </iframe>
+</div>
+<br>
+<p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=9EcxYCiEJx0">introduction video</a> to learn more about the <a class="reference external" href="https://huggingface.co/spaces/AccelerationConsortium/OT-2-LCM">LCM Hugging Face Space</a> used for liquid color matching experiments with the OT2 liquid handler and this wireless color sensor.</p>
+<p>The estimated time of the hardware assembling is <strong>3-4 hours</strong> assuming no soldering background and low coding experience.</p>
+<br>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>This documentation assumes that readers have completed <a class="reference external" href="https://ac-microcourses.readthedocs.io/en/latest/courses/hello-world/index.html#">Course 1: Hello World</a> and possess basic knowledge of electronic soldering and wiring techniques.
+<br></p>
+</section>
+<section id="bill-of-materials">
+<h2>Bill of materials<a class="headerlink" href="#bill-of-materials" title="Link to this heading">#</a></h2>
+<section id="electronic-parts">
+<h3>Electronic parts:<a class="headerlink" href="#electronic-parts" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Sensor Package:</strong></p>
+<div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Electronic-parts-sensor.png" width="500">
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.digikey.com/en/products/detail/raspberry-pi/SC0919/18713315"><span class="color-red">① PicoW</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.com/en/products/detail/pimoroni-ltd/PIM557/15851380"><span class="color-blue">② Pico LipoSHIM</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/4698/13162109"><span class="color-magenta">③ AS7341 color sensor</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/5905/22596390"><span class="color-orange">④ Picowbell P5905</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-17258/13629029"><span class="color-purple">⑤ STEMMA QT Wire</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2162/6827104"><span class="color-green">⑥ Wireless charger receiver</span></a></p></li>
+<li><p><a class="reference external" href="https://www.amazon.ca/EEMB-Battery-Rechargeable-Lithium-Connector/dp/B08FD3V6TF/"><span class="color-yellow">⑦ Lipo battery with 2-pole JST connector wire</span></a></p></li>
+<li><p><a class="reference external" href="https://www.digikey.ca/en/products/detail/adafruit-industries-llc/4482/11594500"><span class="color-cyan">⑧ 1 Pin male connector jumper wires (2x)</span></a></p></li>
+</ul>
+</li>
+</ul>
+   <br style="clear: both;"> 
+<ul>
+<li><p><strong>Wireless charging port (Dual charging):</strong></p>
+<div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Electronic-parts-charging.png" width="500">
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.digikey.ca/en/products/detail/adafruit-industries-llc/1901/5629432"><span class="color-red">① Wireless charger transmitters (2x) </span></a></p></li>
+<li><p><span class="color-orange"> ② Mirco-USB to USB Type-A cables (<a class="reference external" href="https://www.amazon.ca/gp/product/B073PQWY2B/">1 short</a> and <a class="reference external" href="https://www.digikey.ca/en/products/detail/stewart-connector/SC-2AMK003F/8544577">1 long</a>) </span></p></li>
+<li><p><a class="reference external" href="https://www.digikey.ca/en/products/detail/xp-power/VEL05US050-US-BB/5023710"><span class="color-blue">③ Power supply (5V 2A) </span></a></p></li>
+</ul>
+<br style="clear: both;"> 
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Qi wireless charging:</strong>
+The wireless charging modules linked above comply with the <a class="reference external" href="https://en.wikipedia.org/wiki/Qi_(standard)">Qi standard</a>, providing a consistent power output of 5V/500mA within an effective distance of 2-8mm. However, they are relatively more expensive.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Alternative:</strong>
+One lower-cost alternative is <a class="reference external" href="https://www.adafruit.com/product/1459">this inductive charging set</a>, which requires a 9V power supply. Note that its output is less efficient and inconsistent, varying based on the power input and charging distance. Additionally, it lacks electromagnetic shielding and USB ports, which may require more advanced electronic knowledge to configure.</p>
+</div>
+</section>
+<section id="d-printed-parts">
+<h3>3D printed parts:<a class="headerlink" href="#d-printed-parts" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Sensor package:</strong></p>
+ <div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Printed-parts-sensor.png" width="500">
+ </div>
+<ul class="simple">
+<li><p><span class="color-red">① Microcontroller backboard</span></p></li>
+<li><p><span class="color-orange">② Sensor stand</span></p></li>
+<li><p><span class="color-blue">③ Sensor package main enclosure</span></p></li>
+</ul>
+<br style="clear: both;"> 
+</li>
+</ul>
+  <br>
+<ul>
+<li><p><strong>Wireless charging port:</strong></p>
+ <div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Printed-parts-charging.png" width="500">
+ </div>
+<ul class="simple">
+<li><p><span class="color-red">① Enclosure A side</span></p></li>
+<li><p><span class="color-orange">② Enclosure B side</span></p></li>
+<li><p><span class="color-blue">③ Base board</span></p></li>
+<li><p><span class="color-magenta">④ Transmitter supports (2x) </span></p></li>
+</ul>
+<br style="clear: both;"> 
+</li>
+</ul>
+<p>All the 3D printing files can be found in <a class="reference external" href="https://github.com/Neil-YL/wireless-color-sensor/tree/07829dd6418d59315a7711e57d3ba6ff898b8a76/CAD-File/STEP">this link</a>. If your 3D printer is Bambu Lab series, <a class="reference external" href="https://github.com/Neil-YL/wireless-color-sensor/tree/c080448a7fcbc0e26ace216282e9614ede66aa17/CAD-File/BamBu-File">project files</a> are available for BambuStudio.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Print the sensor package and the charging port enclosure with light-color material so that the LED indicators could be visible from the outsides.</p>
+</div>
+</section>
+<section id="mechanical-components-and-tools">
+<h3>Mechanical components and tools:<a class="headerlink" href="#mechanical-components-and-tools" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Mechanical components:</strong></p>
+ <div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Mechanical-Components.png" width="500">
+ </div>
+<ul class="simple">
+<li><p><span class="color-red">① M2.5-10mm screws (4x)</span></p></li>
+<li><p><span class="color-orange">② M2.5 hex nuts (4x)</span></p></li>
+<li><p><span class="color-blue">③ Painter’s tape</span></p></li>
+</ul>
+<br style="clear: both;"> 
+</li>
+</ul>
+ <br>
+<ul>
+<li><p><strong>Tools required:</strong></p>
+ <div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Tools-required.png" width="500">
+ </div>
+<ul class="simple">
+<li><p><span class="color-red">① Phillips-head #0 screwdriver</span></p></li>
+<li><p><span class="color-blue">② Soldering set</span></p></li>
+</ul>
+</li>
+</ul>
+  <br style="clear: both;"> 
+ <br>
+<ul>
+<li><p><strong>Tools nice to have:</strong></p>
+ <div style="float: right; margin-left: 10px; width: 500px;">
+  <img src="_static/images/Tools-nice-to-have.png" width="500">
+ </div>
+<ul class="simple">
+<li><p><span class="color-red">① Tools to remove 3D printing supports and deburr surface</span></p></li>
+<li><p><span class="color-blue">② Multimeter for electronic connection troubleshooting</span></p></li>
+</ul>
+</li>
+</ul>
+  <br style="clear: both;"> 
+</section>
+</section>
+<section id="hardware-assembly">
+<h2>Hardware assembly<a class="headerlink" href="#hardware-assembly" title="Link to this heading">#</a></h2>
+<section id="preparation-before-you-begin-assembling">
+<h3>Preparation / Before you begin assembling:<a class="headerlink" href="#preparation-before-you-begin-assembling" title="Link to this heading">#</a></h3>
+<section id="d-printed-parts-preparation">
+<h4>3D printed parts preparation:<a class="headerlink" href="#d-printed-parts-preparation" title="Link to this heading">#</a></h4>
+<p>Remove all printing supports from the 3D-printed parts. Deburr all the supported surfaces and edges, especially following highlighted areas that will be used for assembly.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><span style="padding-left: 10px;">Use wirecutters to remove most of the supports from the printed parts.</span><br />
+<span style="padding-left: 10px;">Clean up remaining spikes with sharp utility knives or scissors.</span></p>
+</div>
+<ul class="simple">
+<li><p><span class="color-red">inner walls of the sensor package</span> and <span class="color-orange">those of the charging port enclosure A/B</span></p></li>
+</ul>
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="_static/images/inner-wall.png" style="width: 500px;">
+  </div>
+  <br>
+<ul class="simple">
+<li><p><span class="color-blue">sliding slots</span> on the sensor enclosure and <span class="color-blue">tips</span> on the controller backboard.</p></li>
+</ul>
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="_static/images/Sliding-slots.png" style="width: 500px;">
+  </div>
+ <br>
+<p>You may also test the fit between the sensor enclosure and the pipette on the OT-2. Polish as needed until it achieves a similar fit shown in the photo.</p>
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="_static/images/Fitting-of-pipette.png" style="width: 400px;">
+  </div>
+   <br>
+</section>
+<section id="electronic-parts-soldering">
+<h4>Electronic parts soldering:<a class="headerlink" href="#electronic-parts-soldering" title="Link to this heading">#</a></h4>
+<ol class="arabic">
+<li><p><strong>LipoSHIM:</strong></p>
+<p>Place the LipoSHIM on the back of the PicoW, ensure <span class="color-red">the power button</span> of the LipoSHIM and <span class="color-blue">the micro-USB port</span> on the PicoW are on the same side.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/PicoShim-soldering-1.png" style="width: 500px;">
+</div>
+<br>
+<p>Solder <span class="color-orange">8 pins on each row</span> on the PicoW.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/PicoShim-soldering-3.png" style="width: 500px;">
+</div>
+<br>
+<p>You may connect the PicoW to a micro-USB power supply and use the power button to check the soldering connection; <span class="color-red">the white LED indicator</span> on the LipoSHIM should light up.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/PicoShim-power-check.png" style="width: 500px;">
+</div>
+</li>
+</ol>
+  <br>
+<ol class="arabic" start="2">
+<li><p><strong>Battery connnector:</strong></p>
+<p>If you are working with the battery from the link provided in BOM section or if <span class="color-blue">the polarity of your battery</span> 2-pin JST connector is opposite to <span class="color-red">that of the LipoSHIM</span>:</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Battery-soldering-1.png" style="width: 500px;">
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never connect your battery to PicoSHIM with wrong polarity!</p>
+</div>
+<p><a id="battery-connector"></a>
+You can correct it by cutting off the connector, swapping the wires, and then resoldering them to match the correct polarity.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Battery-soldering-2.png" style="width: 500px;">
+</div>
+</li>
+</ol>
+<br>
+<ol class="arabic" start="3">
+<li><p><strong>Wireless charging unit:</strong></p>
+<p>Solder a jumper wire to <span class="color-red">the C1+ (or C2+) pad</span> and another to <span class="color-blue">the GND pad</span> on the receiver board.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Receiver-soldering-1.png" style="width: 500px;">
+</div>     
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Receiver-soldering-2.png" style="width: 500px;">
+</div>   
+<br>
+<p>Connect the transmitter to a power supply via micro-USB port and place the receiver on top of the transmitter (coils faced with coils). Check if <span class="color-blue">the blue LED charging indicator</span> on the transmitter board lights up. You may use a multimeter to measure the voltage between the two jumper wires; the reading should be approximately 5V.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Receiver-soldering-3.png" style="width: 500px;">
+</div>      
+</li>
+</ol>
+</section>
+<section id="dual-charging-connection-check">
+<h4>Dual charging connection check:<a class="headerlink" href="#dual-charging-connection-check" title="Link to this heading">#</a></h4>
+<p>You may also check the connection of the dual wireless charging setup before start assembling. Use the short micro-USB/USB Type-A cable to connect two transmitters and connect the transmitter that has a free micro-USB port to a power supply. Test the receiver with the same procedure above for the wireless charging unit, the receiver should give a voltage reading of approximately 5V on each transmitter.</p>
+   <div style="text-align: center; margin-top: 10px;">
+      <img src="_static/images/Dual-charging-test.png" style="width: 500px;">
+   </div>      
+  <br>
+</section>
+</section>
+<section id="assembling">
+<h3>Assembling:<a class="headerlink" href="#assembling" title="Link to this heading">#</a></h3>
+<section id="sensor-package-assembling">
+<h4>Sensor Package assembling:<a class="headerlink" href="#sensor-package-assembling" title="Link to this heading">#</a></h4>
+<ol class="arabic">
+<li><p><strong>Connect battery to Picow and LipoSHIM assembly:</strong></p>
+<p>Ensure the polarity of the battery matches the +/- markings on the LipoSHIM, if you are using the battery from the link provided in BOM section, <a class="reference internal" href="#battery-connector"><span class="xref myst">reverse the polarity</span></a> before connecting it to the LipoSHIM.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never connect your battery to PicoSHIM with wrong polarity!</p>
+</div>
+<p>Connect the battery to the LipoSHIM with <span class="color-blue">the JST connector</span>. Adjust the wires of the battery to through <span class="color-red">a row of pins</span> on the PicoW.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Battery-Picow-1.png" style="width: 500px;">
+</div>   
+<br>
+<p>Test connection: Press the button on the LipoSHIM to power on the PicoW; <span class="color-blue">the white LED indicator</span> on the LipoSHIM should light up. Connect the PicoW to a power supply via the micro-USB port; <span class="color-red">the red LED charging indicator</span> on the LipoSHIM should also light up.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Battery-Picow-2.png" style="width: 500px;">
+</div>   
+<br>
+<p>Power off and disconnect the power supply before proceeding with following steps.</p>
+</li>
+<li><p><strong>Mount PicoW on Picowbell:</strong></p>
+<p>Place the PicoW on the top of the Picowbell sockets; <span class="color-red">the micro-USB port</span> on PicoW should be at the same side as <span class="color-blue">the STEMMA QT port</span> on Picowbell.</p>
+ <div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Picow-Picowbell-1.png" style="width: 500px;">
+</div>   
+<br>     
+<p>Carefully align the pins and press down the PicoW to secure it onto the Picowbell.</p>
+</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Since the power button on the PicoSHIM will interfere with the STEMMA QT port on the Picowbell, you don’t need to push the PicoW all the way down.</p>
+</div>
+<ol class="arabic" start="3">
+<li><p><strong>Connect wireless charging receiver to Picowbell:</strong></p>
+<p>Connect the GND jumper wire from the receiver to <span class="color-red">the GND socket</span> (third on the right, No.38) on the Picowbell.</p>
+<p>Connect the C1+(or C2+) jumper wire to <span class="color-blue">the VBUS socket</span> (first on the right, No.40) on the Picowbell.</p>
+ <div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Picow-Pin-1.png" style="width: 750px;">
+</div>  
+<br> 
+<p>Place the receiver on the powered transmitter, <span class="color-red">the red LED indicator</span> on LipoSHIM and <span class="color-blue">the blue LED indicator</span> on the transmitter should light up.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Receiver-Picowbell-1.png" style="width: 500px;">
+</div>   
+<br> 
+</li>
+<li><p><strong>Connect AS7341 to Picowbell:</strong></p>
+<p>Connect <span class="color-red">AS7341</span> to <span class="color-blue">Picowbell’s STEMMA QT port</span> with a STEMMA QT wire.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/AS7341-Picobell-1.png" style="width: 500px;">
+</div>   
+<br>       
+ Turn on the Picow (using the button on LipoSHIM), <span class="color-green">the green LED indicator</span> on AS7341 should light on.
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/AS7341-Picobell-2.png" style="width: 500px;">
+</div>   
+<br>   
+<p>Test the color sensor (software testing section)</p>
+</li>
+<li><p><strong>Assemble Picowbell to the backboard:</strong></p>
+<p>Align the assemble holes on Picowbell to those on the backboard, ensuring that <span class="color-red">the micro-USB port</span> on Picow is positioned on the side of <span class="color-blue">the backboard’s opening slot</span>, adjusting the sensor cable to <span class="color-orange">one side within the case</span>.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/ Picowbell-to-backboard-1.png" style="width: 600px;">
+</div>   
+<br>   
+<p>Insert <span class="color-red">the screws</span> through the holes on the Picowbell, position the nuts from <span class="color-blue">the back of the backboard</span>, and secure them with a screwdriver.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/ Picowbell-to-backboard-2.png" style="width: 600px;">
+</div> 
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The positions of the nuts and screws can be swapped, but this method is generally easier for assembly.</p>
+</div>
+</li>
+<li><p><strong>Secure sensor stand to the main enclosure end:</strong></p>
+<p>The sensor stand is a thin board with four spikes, designed with a thinner edge and a thicker edge. Position the sensor stand with <span class="color-red">the thinner edge</span> at the opening side of the main enclosure and the spikes on the top.</p>
+ <div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/sensor-stand-to-main-1.png" style="width: 500px;">
+</div>   
+<br>   
+<p>Insert it into the sensor end of the main enclosure. If the sensor stand is properly assembled, the spikes will be slightly higher than the surrounding flat surface.</p>
+ <div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/sensor-stand-to-main-2.png" style="width: 500px;">
+</div>   
+<br>   
+</li>
+<li><p><strong>Secure the color sensor to the stand:</strong></p>
+<p>Face down the AS7341, with <span class="color-red">the yellow square</span> on AS7341 close to opening of the main enclosure, align the assemble holes with four spikes, secure AS7341 to the stand.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/sensor-to-stand-1.png" style="width: 500px;">
+</div>   
+<br>   
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/sensor-to-stand-2.png" style="width: 500px;">
+</div>   
+<br>   
+<p>The yellow square on AS7341 should be visible from the hole of the sensor enclosure if the sensor is assembled properly.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/sensor-to-stand-3.png" style="width: 500px;">
+</div>   
+<br>   
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you would like to disassemble the sensor or sensor stand after assembly, use a tweezer(or a similar tool) to gently pry up one side of the sensor, then the other side, gradually lifting it out from four spikes. For the sensor stand, use a thin tool to push it up from the bottom. Be careful not to touch the central electronic components of the sensor during this process.</p>
+</div>
+<ol class="arabic" start="8">
+<li><p><strong>Secure the receiver:</strong></p>
+<p>Prepare two pieces of painter’s tape, approximately 40mm long each. Place the wireless charger receiver on the inner wall of the enclosure, with the coils facing against the wall and the receiver board on the right, and secure with the painter’s tape.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/receiver-to-main-1.png" style="width: 500px;">
+</div>   
+<br>   
+</li>
+<li><p><strong>Final Assembly of the Backboard and Main Enclosure：</strong></p>
+<p>Aligning the sliding tips on both ends of the backboard to the sliding slots on the main enclosure, adjusting all the wires within the enclosure, carefully assemble the backboard to the main enclosure.</p>
+<div style="text-align: center; margin-top: 10px; display: flex; justify-content: center;">
+ <img src="_static/images/backboard-to-main-1.png" style="width: 400px; margin-right: 10px;">
+ <img src="_static/images/backboard-to-main-2.png" style="width: 400px;">
+</div>
+<br>   
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Video Guide</strong>:
+You may also refer to this video for step-by-step assembly guide</p>
+</div>
+ <div style="text-align: center; margin-top: 10px;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9jREn-jBnCQ?list=PLY8jlH96_zN2E55mRGohK9wP5QhzqMF7C&rel=0" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+ </div>
+  <br>  
+<p><strong>🎉 Congrats, your wireless color sensor is ready to go!</strong></p>
+   <div style="text-align: center; margin-top: 10px;">
+       <img src="_static/images/backboard-to-main-3.png" style="width: 500px;">
+   </div>   
+   <br>  
+</section>
+<section id="dual-charging-port-assembling">
+<h4>Dual Charging port assembling:<a class="headerlink" href="#dual-charging-port-assembling" title="Link to this heading">#</a></h4>
+<ol class="arabic">
+<li><p>Join the A and B sides of the charging port enclosure, aligning them properly, and secure both parts together.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Port-A-B-1.png" style="width: 500px;">
+</div>   
+<br>  
+</li>
+<li><p>Plug the short micro-USB cable into <span class="color-red">the micro-USB port</span> on one transmitter.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-A-support-1.png" style="width: 500px;">
+</div>   
+<br>  
+<p>Place the transmitter onto the transmitter support with the coils facing outward.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-A-support-2.png" style="width: 500px;">
+</div>   
+<br>
+<p>Route the coils wires down from <span class="color-blue">the thinner edge</span> of the support.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-A-support-3.png" style="width: 500px;">
+</div>   
+<br>
+<p>Insert the transmitter support with transmitter board into the port enclosure assembly. Then, secure it in place, ensuring there is no gap between the transmitter coils and the wall of the sensor slot.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-A-support-4.png" style="width: 500px;">
+</div>   
+<br>
+</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If there is a gap between the coils and the inner wall, or if the transmitter support bends significantly, consider polishing the walls for assembling to achieve a better fit.</p>
+</div>
+<ol class="arabic" start="3">
+<li><p>Thread the long micro-USB cable through the square hole into the charging port assembly with the micro-USB head.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Long-usb-cable-1.png" style="width: 500px;">
+</div>   
+<br>
+</li>
+<li><p>Place another transmitter on the transmitter support with the coils facing outward.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-B-support-1.png" style="width: 500px;">
+</div>   
+<br>  
+<p>Route the coils wires down from the thicker side of the support through <span class="color-blue">the routing slot</span>.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-B-support-2.png" style="width: 500px;">
+</div>   
+<br>  
+<p>Insert the transmitter support into the port enclosure assembly, leaving the transmitter board on the top. Secure the transmitter support in place, ensuring there is no gap between the transmitter coils and the wall of the sensor slot.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Transmitter-B-support-3.png" style="width: 500px;">
+</div>   
+<br>  
+</li>
+<li><p>Connect the short USB cable to the USB type-A port on the second transmitter. Connect the long micro-USB cable to the micro-USB port of the second transmitter. If you find any difficulties with cable connections, try swapping two transmitters to rearrange cable.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Cables-connection-1.png" style="width: 500px;">
+</div>   
+<br>  
+</li>
+<li><p>Connect the long cable to a power supply. The LED indicators on both transmitters should flash in the following sequence: blue; red; blue and red, and all off. If either indcator does not flash, you may check the cable connections.</p>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="_static/images/Cables-connection-2.png" style="width: 500px;">
+</div>   
+<br>  
+</li>
+<li><p>Arrange the cables inside the enclosure and assemble the base board to the port enclosure. Place the sensor package on the slot of the charging port, the red indicator on the sensor package should light up.</p>
+<div style="text-align: center; margin-top: 10px; display: flex; justify-content: center;">
+ <img src="_static/images/Sensor-charging-1.png" style="width: 400px; margin-right: 10px;">
+ <img src="_static/images/Sensor-charging-2.png" style="width: 400px;">
+</div>
+<br>   
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Video Guide</strong>:
+You may also refer to this video for step-by-step assembly guide</p>
+</div>
+ <div style="text-align: center; margin-top: 10px;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/p-gA2RxMddI?list=PLY8jlH96_zN2E55mRGohK9wP5QhzqMF7C&rel=0" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+ </div>
+  <br>  
+</section>
+</section>
+</section>
+<section id="software-part">
+<h2>Software part<a class="headerlink" href="#software-part" title="Link to this heading">#</a></h2>
+<section id="test-code-for-sensor">
+<h3>Test code for sensor<a class="headerlink" href="#test-code-for-sensor" title="Link to this heading">#</a></h3>
+<p>Before closing the enclosure, you may run the test code for the sensor. Turn on the PicoW, connect it to your PC and follow the setup instructions for Thonny and MicroPython for your Pico W and the AS7341 library file, in <a class="reference external" href="https://ac-microcourses.readthedocs.io/en/latest/courses/hello-world/index.html#">Course 1: Hello World</a>.</p>
+<p>Save the following codes as “as7341_test.py” and upload it to your PicoW.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>      <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+      <span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">I2C</span><span class="p">,</span> <span class="n">Pin</span>
+      <span class="kn">from</span><span class="w"> </span><span class="nn">as7341_sensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sensor</span>
+
+      <span class="c1"># Initialize the AS7341 sensor</span>
+      <span class="n">sensor</span> <span class="o">=</span> <span class="n">Sensor</span><span class="p">(</span><span class="n">i2c</span><span class="o">=</span><span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scl</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
+
+      <span class="k">def</span><span class="w"> </span><span class="nf">read_sensor_data</span><span class="p">():</span>
+<span class="w">          </span><span class="sd">&quot;&quot;&quot;Read dictionary of sensor data&quot;&quot;&quot;</span>
+          <span class="c1"># Get all channel data from the sensor</span>
+          <span class="n">channel_data</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">all_channels</span>
+
+          <span class="n">CHANNEL_NAMES</span> <span class="o">=</span> <span class="p">[</span>
+              <span class="s2">&quot;ch410&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch440&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch470&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch510&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch550&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch583&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch620&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;ch670&quot;</span><span class="p">,</span>
+          <span class="p">]</span>
+
+          <span class="c1"># Return a dictionary that maps channel names to sensor data</span>
+          <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">CHANNEL_NAMES</span><span class="p">,</span> <span class="n">channel_data</span><span class="p">))</span>
+
+
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing sensor...&quot;</span><span class="p">)</span>
+      <span class="n">sensor_data</span> <span class="o">=</span> <span class="n">read_sensor_data</span><span class="p">()</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">sensor_data</span><span class="p">)</span>
+
+
+      <span class="k">def</span><span class="w"> </span><span class="nf">test_sensor</span><span class="p">():</span>
+<span class="w">          </span><span class="sd">&quot;&quot;&quot;Interactive testing interface for the AS7341 sensor.&quot;&quot;&quot;</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AS7341 Sensor Test&quot;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==================&quot;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type &#39;read&#39; to sample data or &#39;exit&#39; to quit.&quot;</span><span class="p">)</span>
+
+          <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+              <span class="c1"># Wait for a command from the user</span>
+              <span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Command: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+              <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;read&quot;</span><span class="p">:</span>
+                  <span class="c1"># Ask whether to turn on the LED</span>
+                  <span class="n">led_choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Turn on LED for this reading? (yes/no): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                  <span class="k">if</span> <span class="n">led_choice</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+                      <span class="n">sensor</span><span class="o">.</span><span class="n">LED</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Turn on LED</span>
+                      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LED is ON.&quot;</span><span class="p">)</span>
+
+                  <span class="c1"># Trigger sensor data reading</span>
+                  <span class="n">sensor_data</span> <span class="o">=</span> <span class="n">read_sensor_data</span><span class="p">()</span>
+                  <span class="k">if</span> <span class="n">sensor_data</span><span class="p">:</span>
+                      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensor Data:&quot;</span><span class="p">)</span>
+                      <span class="k">for</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sensor_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                          <span class="c1">#print(f&quot;{wavelength}: {value}&quot;)</span>
+                          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                  <span class="k">else</span><span class="p">:</span>
+                      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to read sensor data.&quot;</span><span class="p">)</span>
+
+                  <span class="c1"># Turn off the LED if it was turned on</span>
+                  <span class="k">if</span> <span class="n">led_choice</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+                      <span class="n">sensor</span><span class="o">.</span><span class="n">LED</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Turn off LED</span>
+                      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LED is OFF.&quot;</span><span class="p">)</span>
+
+              <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;exit&quot;</span><span class="p">:</span>
+                  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exiting the program.&quot;</span><span class="p">)</span>
+                  <span class="k">break</span>
+              <span class="k">else</span><span class="p">:</span>
+                  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid command. Type &#39;read&#39; to sample or &#39;exit&#39; to quit.&quot;</span><span class="p">)</span>
+
+      <span class="c1"># Directly call the test_sensor function</span>
+      <span class="n">test_sensor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Run this script on your Pico W. It should return results as follows; the data for each channel may vary depending on what your color sensor is detecting.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">MPY</span><span class="p">:</span> <span class="n">soft</span> <span class="n">reboot</span>
+    <span class="n">Detected</span> <span class="n">devices</span> <span class="n">at</span> <span class="n">I2C</span><span class="o">-</span><span class="n">addresses</span><span class="p">:</span> <span class="mh">0x39</span>
+    <span class="n">Testing</span> <span class="n">sensor</span><span class="o">...</span>
+    <span class="p">{</span><span class="s1">&#39;ch583&#39;</span><span class="p">:</span> <span class="mi">1507</span><span class="p">,</span> <span class="s1">&#39;ch670&#39;</span><span class="p">:</span> <span class="mi">775</span><span class="p">,</span> <span class="s1">&#39;ch510&#39;</span><span class="p">:</span> <span class="mi">756</span><span class="p">,</span> <span class="s1">&#39;ch410&#39;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span> <span class="s1">&#39;ch620&#39;</span><span class="p">:</span> <span class="mi">1548</span><span class="p">,</span> <span class="s1">&#39;ch470&#39;</span><span class="p">:</span> <span class="mi">344</span><span class="p">,</span> <span class="s1">&#39;ch550&#39;</span><span class="p">:</span> <span class="mi">1172</span><span class="p">,</span> <span class="s1">&#39;ch440&#39;</span><span class="p">:</span> <span class="mi">294</span><span class="p">}</span>
+    <span class="n">AS7341</span> <span class="n">Sensor</span> <span class="n">Test</span>
+    <span class="o">==================</span>
+    <span class="n">Type</span> <span class="s1">&#39;read&#39;</span> <span class="n">to</span> <span class="n">sample</span> <span class="n">data</span> <span class="ow">or</span> <span class="s1">&#39;exit&#39;</span> <span class="n">to</span> <span class="n">quit</span><span class="o">.</span>
+    <span class="n">Command</span><span class="p">:</span> 
+</pre></div>
+</div>
+<p>You use command “Read” to start a measurement, and “Yes/No” to control the LED lighting on the color sensor.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bill-of-materials">Bill of materials</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-parts">Electronic parts:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printed-parts">3D printed parts:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-components-and-tools">Mechanical components and tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-assembly">Hardware assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-before-you-begin-assembling">Preparation / Before you begin assembling:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printed-parts-preparation">3D printed parts preparation:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-parts-soldering">Electronic parts soldering:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dual-charging-connection-check">Dual charging connection check:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assembling">Assembling:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-package-assembling">Sensor Package assembling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dual-charging-port-assembling">Dual Charging port assembling:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-part">Software part</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-code-for-sensor">Test code for sensor</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Neil-YL
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Neil-YL.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
