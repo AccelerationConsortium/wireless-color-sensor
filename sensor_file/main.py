@@ -4,7 +4,7 @@ import json
 import ssl
 import ntptime
 from uio import StringIO
-from time import time, sleep
+from time import time, sleep, ticks_ms, ticks_diff
 
 from machine import I2C, Pin
 
@@ -191,7 +191,7 @@ client = MQTTClient(
     HIVEMQ_HOST,
     user=HIVEMQ_USERNAME,
     password=HIVEMQ_PASSWORD,
-    keepalive=3600,
+    keepalive=15,
     ssl=True,
     port=8883,
     ssl_params=ssl_params,
@@ -206,7 +206,12 @@ try:
 except OSError as e:
     print(f"MQTT connection failed: {e}. Retrying in 5 seconds...")
     sleep(5)
-    client.connect()
+    try:
+        client.connect()
+        print("Connected to MQTT broker on retry")
+    except OSError as e2:
+        print(f"Second connection attempt failed: {e2}")
+        raise
 
 # Subscribe to command topic
 client.subscribe(command_topic)
