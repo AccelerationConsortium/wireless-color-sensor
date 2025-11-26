@@ -2,10 +2,9 @@
 import sys
 import json
 import ssl
-import asyncio
 import ntptime
 from uio import StringIO
-from time import time, sleep
+from time import sleep, ticks_ms, ticks_diff
 
 from machine import I2C, Pin
 
@@ -18,7 +17,7 @@ from neopixel import NeoPixel
 from as7341_sensor import Sensor
 
 # MQTT
-from mqtt_as import MQTTClient, config
+from umqtt.simple import MQTTClient
 
 from my_secrets import (
     SSID,
@@ -113,26 +112,15 @@ with open("hivemq-com-chain.der", "rb") as f:
     cacert = f.read()
 f.close()
 
-# Local configuration
-config.update(
-    {
-        "ssid": SSID,
-        "wifi_pw": PASSWORD,
-        "server": HIVEMQ_HOST,
-        "user": HIVEMQ_USERNAME,
-        "password": HIVEMQ_PASSWORD,
-        "ssl": True,
-        "ssl_params": {
-            "server_side": False,
-            "key": None,
-            "cert": None,
-            "cert_reqs": ssl.CERT_REQUIRED,
-            "cadata": cacert,
-            "server_hostname": HIVEMQ_HOST,
-        },
-        "keepalive": 15,
-    }
-)
+# SSL parameters for secure MQTT connection
+ssl_params = {
+    "server_side": False,
+    "key": None,
+    "cert": None,
+    "cert_reqs": ssl.CERT_REQUIRED,
+    "cadata": cacert,
+    "server_hostname": HIVEMQ_HOST,
+}
 
 
 # Dummy function for running a color experiment
@@ -158,72 +146,97 @@ sensor_data_topic = f"color-mixing/picow/{PICO_ID}/as7341"
 print(f"Command topic: {command_topic}")
 print(f"Sensor data topic: {sensor_data_topic}")
 
-async def messages(client):  # Respond to incoming messages
-    async for topic, msg, retained in client.queue:
-        try:
-            topic = topic.decode()
-            msg = msg.decode()
-            retained = str(retained)
-            print((topic, msg, retained))
 
-            if topic == command_topic:
-                # Parse the incoming message as JSON
-                incoming_dict = json.loads(msg)
-                command = incoming_dict["command"]
-                experiment_id = incoming_dict["experiment_id"]
+def mqtt_callback(topic, msg):
+    """Callback function to handle incoming MQTT messages"""
+    try:
+        topic = topic.decode()
+        msg = msg.decode()
+        print((topic, msg))
 
-                # Extract the RGB values and experiment_id from the command
-                R = command["R"]
-                Y = command["Y"]
-                B = command["B"]
-                
+        if topic == command_topic:
+            # Parse the incoming message as JSON
+            incoming_dict = json.loads(msg)
+            command = incoming_dict["command"]
 
-                # Run the color experiment with the specified RGB values
-                sensor_data = run_color_experiment(R, Y, B)
+            # Extract the RGB values from the command
+            R = command["R"]
+            Y = command["Y"]
+            B = command["B"]
 
-                # Combine the sensor data with the original command
-                payload_data = incoming_dict.copy()
-                payload_data.update({"sensor_data": sensor_data})
-                #payload_data["course_id"] = COURSE_ID
+            # Run the color experiment with the specified RGB values
+            sensor_data = run_color_experiment(R, Y, B)
 
-                # Convert the payload data to a JSON string
-                payload = json.dumps(payload_data)
+            # Combine the sensor data with the original command
+            payload_data = incoming_dict.copy()
+            payload_data.update({"sensor_data": sensor_data})
 
-                # Publish the payload to the sensor data topic
-                await client.publish(sensor_data_topic, payload)
-                print("sensor results published")
+            # Convert the payload data to a JSON string
+            payload = json.dumps(payload_data)
 
-        except Exception as e:
-            with StringIO() as f:  # type: ignore
-                sys.print_exception(e, f)  # type: ignore
-                print(f.getvalue())  # type: ignore
+            # Publish the payload to the sensor data topic
+            client.publish(sensor_data_topic, payload)
+            print("sensor results published")
+
+    except Exception as e:
+        with StringIO() as f:  # type: ignore
+            sys.print_exception(e, f)  # type: ignore
+            print(f.getvalue())  # type: ignore
 
 
-async def up(client):  # Respond to connectivity being (re)established
-    while True:
-        await client.up.wait()  # Wait on an Event
-        client.up.clear()
-        await client.subscribe(command_topic, 1)  # renew subscriptions
+# Create MQTT client
+client = MQTTClient(
+    PICO_ID,
+    HIVEMQ_HOST,
+    user=HIVEMQ_USERNAME,
+    password=HIVEMQ_PASSWORD,
+    keepalive=3600,
+    ssl=True,
+    port=8883,
+    ssl_params=ssl_params,
+)
 
+# Set the callback and connect
+client.set_callback(mqtt_callback)
 
-async def main(client):
-    await client.connect()
-    for coroutine in (up, messages):
-        asyncio.create_task(coroutine(client))
-
-    start_time = time()
-    # must have the while True loop to keep the program running
-    while True:
-        await asyncio.sleep(5)
-        onboard_led.toggle()
-        elapsed_time = round(time() - start_time)
-        print(f"Elapsed: {elapsed_time}s")
-
-
-config["queue_len"] = 5  # Use event interface with specified queue length
-MQTTClient.DEBUG = True  # Optional: print diagnostic messages
-client = MQTTClient(config)
 try:
-    asyncio.run(main(client))
+    client.connect()
+    print("Connected to MQTT broker")
+except OSError as e:
+    print(f"MQTT connection failed: {e}. Retrying in 5 seconds...")
+    sleep(5)
+    try:
+        client.connect()
+        print("Connected to MQTT broker on retry")
+    except OSError as e2:
+        print(f"Second connection attempt failed: {e2}")
+        raise
+
+# Subscribe to command topic
+client.subscribe(command_topic)
+print(f"Subscribed to {command_topic}")
+
+print("")
+print("Waiting for experiment requests...")
+print("")
+
+sign_of_life(onboard_led, True)  # Initialize sign_of_life
+
+# Main loop to check for messages
+try:
+    while True:
+        try:
+            client.check_msg()
+            sign_of_life(onboard_led, False)
+        except OSError as e:
+            print(f"Error: {e}. Reconnecting...")
+            try:
+                connectWiFi(SSID, PASSWORD, country="CA")
+                client.connect()
+                client.set_callback(mqtt_callback)
+                client.subscribe(command_topic)
+            except Exception as reconnect_error:
+                print(f"Reconnection failed: {reconnect_error}")
+                sleep(5)
 finally:
-    client.close()  # Prevent LmacRxBlk:1 errors
+    client.disconnect()
