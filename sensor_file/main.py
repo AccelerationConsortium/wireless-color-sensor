@@ -4,7 +4,7 @@ import json
 import ssl
 import ntptime
 from uio import StringIO
-from time import time, sleep, ticks_ms, ticks_diff
+from time import sleep, ticks_ms, ticks_diff
 
 from machine import I2C, Pin
 
@@ -190,7 +190,7 @@ client = MQTTClient(
     HIVEMQ_HOST,
     user=HIVEMQ_USERNAME,
     password=HIVEMQ_PASSWORD,
-    keepalive=15,
+    keepalive=3600,
     ssl=True,
     port=8883,
     ssl_params=ssl_params,
@@ -220,21 +220,20 @@ print("")
 print("Waiting for experiment requests...")
 print("")
 
-start_time = time()
+sign_of_life(onboard_led, True)  # Initialize sign_of_life
+
 # Main loop to check for messages
 try:
     while True:
         try:
             client.check_msg()
-            onboard_led.toggle()
-            elapsed_time = round(time() - start_time)
-            print(f"Elapsed: {elapsed_time}s")
-            sleep(5)
+            sign_of_life(onboard_led, False)
         except OSError as e:
             print(f"Error: {e}. Reconnecting...")
             try:
                 connectWiFi(SSID, PASSWORD, country="CA")
                 client.connect()
+                client.set_callback(mqtt_callback)
                 client.subscribe(command_topic)
             except Exception as reconnect_error:
                 print(f"Reconnection failed: {reconnect_error}")
