@@ -158,9 +158,8 @@ def mqtt_callback(topic, msg):
             # Parse the incoming message as JSON
             incoming_dict = json.loads(msg)
             command = incoming_dict["command"]
-            experiment_id = incoming_dict["experiment_id"]
 
-            # Extract the RGB values and experiment_id from the command
+            # Extract the RGB values from the command
             R = command["R"]
             Y = command["Y"]
             B = command["B"]
