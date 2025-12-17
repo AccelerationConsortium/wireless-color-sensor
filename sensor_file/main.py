@@ -162,7 +162,6 @@ async def messages(client):  # Respond to incoming messages
                 R = command["R"]
                 Y = command["Y"]
                 B = command["B"]
-                
 
                 # Run the color experiment with the specified RGB values
                 sensor_data = run_color_experiment(R, Y, B)
