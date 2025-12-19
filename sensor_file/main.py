@@ -1,4 +1,3 @@
-
 import sys
 import json
 import ssl
@@ -40,6 +39,20 @@ def get_onboard_led():
     return onboard_led
 
 onboard_led = get_onboard_led()
+
+
+def sign_of_life(led, first, blink_interval_ms=5000):
+    global last_blink
+    if first:
+        led.on()
+        last_blink = ticks_ms()
+    time_since = ticks_diff(ticks_ms(), last_blink)
+    if led.value() == 0 and time_since >= blink_interval_ms:
+        led.toggle()
+        last_blink = ticks_ms()
+    elif led.value() == 1 and time_since >= 500:
+        led.toggle()
+        last_blink = ticks_ms()
 
 
 # Instantiate the Sensor class
@@ -162,6 +175,7 @@ async def messages(client):  # Respond to incoming messages
                 R = command["R"]
                 Y = command["Y"]
                 B = command["B"]
+                
 
                 # Run the color experiment with the specified RGB values
                 sensor_data = run_color_experiment(R, Y, B)
