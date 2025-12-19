@@ -4,6 +4,11 @@ env/
 ENV/
 venv/
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
 # macOS specific files
 .DS_Store
 
