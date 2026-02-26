@@ -11,9 +11,22 @@ This documentation provides a guide to assemble and test a color sensor package 
 <br>
 Following is a video of liquid color matching demo run on OT-2 with this wireless color sensor:
 
-(Video link to be added)
 
-The estimated time of the hardware assembling is:
+<div style="text-align: center; margin-top: 10px;">
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/Ql7_V_8dtdw?rel=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+  </iframe>
+</div>
+
+<br>
+
+Watch this [introduction video](https://www.youtube.com/watch?v=9EcxYCiEJx0) to learn more about the [LCM Hugging Face Space](https://huggingface.co/spaces/AccelerationConsortium/OT-2-LCM) used for liquid color matching experiments with the OT2 liquid handler and this wireless color sensor.
+
+The estimated time of the hardware assembling is **3-4 hours** assuming no soldering background and low coding experience.
 
 <br>
 
@@ -37,7 +50,7 @@ This documentation assumes that readers have completed [Course 1: Hello World](h
     - [<span class="color-magenta">③ AS7341 color sensor</span>](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4698/13162109)
     - [<span class="color-orange">④ Picowbell P5905</span>](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5905/22596390)
     - [<span class="color-purple">⑤ STEMMA QT Wire</span>](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-17258/13629029)
-    - [<span class="color-green">⑥ Wireless charger receiver</span>](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/317010008/5487684)
+    - [<span class="color-green">⑥ Wireless charger receiver</span>](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/2162/6827104)
 
     - [<span class="color-yellow">⑦ Lipo battery with 2-pole JST connector wire</span>](https://www.amazon.ca/EEMB-Battery-Rechargeable-Lithium-Connector/dp/B08FD3V6TF/)
 
@@ -51,7 +64,7 @@ This documentation assumes that readers have completed [Course 1: Hello World](h
       <img src="_static/images/Electronic-parts-charging.png" width="500">
     </div>
 
-    - [<span class="color-red">① Wireless charger transmitters (2x) </span>](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/113030020/5487569)
+    - [<span class="color-red">① Wireless charger transmitters (2x) </span>](https://www.digikey.ca/en/products/detail/adafruit-industries-llc/1901/5629432)
     - <span class="color-orange"> ② Mirco-USB to USB Type-A cables ([1 short](https://www.amazon.ca/gp/product/B073PQWY2B/) and [1 long](https://www.digikey.ca/en/products/detail/stewart-connector/SC-2AMK003F/8544577)) </span>
     - [<span class="color-blue">③ Power supply (5V 2A) </span>](https://www.digikey.ca/en/products/detail/xp-power/VEL05US050-US-BB/5023710)
    
@@ -187,7 +200,7 @@ Print the sensor package and the charging port enclosure with light-color materi
    
   1. **LipoSHIM:** 
 
-     Place the LipoSHIM on the back of the PicoW, ensure <span class="color-red">the power button</span> of the LipoSHIM and <span class="color-blue">the micro-USB port</span> on the PicoW are on the same side.
+     Place the LipoSHIM on the back of the PicoW, ensure <span class="color-red">the power button</span> of the LipoSHIM and <span class="color-blue">the micro-USB port</span> on the PicoW are on the same side. Position the LipoSHIM close to the USB port end of the PicoW pins, not at the far end, so that the Picowbell can be mounted later.
 
      <div style="text-align: center; margin-top: 10px;">
        <img src="_static/images/PicoShim-soldering-1.png" style="width: 500px;">
