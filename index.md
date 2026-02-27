@@ -200,7 +200,7 @@ Print the sensor package and the charging port enclosure with light-color materi
    
   1. **LipoSHIM:** 
 
-     Place the LipoSHIM on the back of the PicoW, ensure <span class="color-red">the power button</span> of the LipoSHIM and <span class="color-blue">the micro-USB port</span> on the PicoW are on the same side.
+     Place the LipoSHIM on the back of the PicoW, ensure <span class="color-red">the power button</span> of the LipoSHIM and <span class="color-blue">the micro-USB port</span> on the PicoW are on the same side. Position the LipoSHIM close to the USB port end of the PicoW pins, not at the far end, so that the Picowbell can be mounted later.
 
      <div style="text-align: center; margin-top: 10px;">
        <img src="_static/images/PicoShim-soldering-1.png" style="width: 500px;">
