@@ -1,7 +1,0 @@
-SSID = " "
-PASSWORD = " "
-HIVEMQ_USERNAME = " "
-HIVEMQ_PASSWORD = " "
-HIVEMQ_HOST = " "
-COURSE_ID = " "
-PICO_ID = " "

@@ -19,3 +19,5 @@ Thumbs.db
 # IDE and editor specific files
 .vscode/
 
+# Local sensor credentials
+/sensor_file/my_secrets.py
